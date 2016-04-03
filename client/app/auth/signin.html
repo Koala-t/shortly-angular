@@ -1,9 +1,12 @@
-<div id='signin'>
-  <h1>signin</h1>
+<div id='signin' ng-controller="AuthController">
+  <h1>Sign In</h1>
   <form name="signinForm" ng-submit='signin()'>
-    <input type='text'ng-model='user.username'>
-    <input type="password" ng-model='user.password'>
-    <button>signin</button>
+    <input type='text'ng-model='user.username' required>
+    <input type="password" ng-model='user.password' required>
+    <button>Sign In</button>
+    <div role="alert">
+      <span class="error" ng-show="signinForm.input.$error.required">Required!</span>
+    </div>
   </form>
-  <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a>
+  <a href="#/signup">Don't have an account? <strong>Sign Up</strong> ...</a>
 </div>

@@ -1,6 +1,23 @@
-<div id='container'>
-<!-- Your code here -->
+<div class="navigation">
+  <ul>
+    <li><a href="#/links" class="All-Links">Links</a></li>
+    <li><a href="#/shorten" class="Shorten">Shorten</a></li>
+  </ul>
+    <a href="#/signin" class="logout">Logout</a>
+</div>
 
+<div id='container' ng-controller="ShortenController">
+  <h1>Shorten</h1>
+  <form name="shortenForm" ng-submit='addLink()'>
+    <input name="input" type='url' ng-model='link.url' required>
+    <button>Shorten</button>
+    <div role="alert">
+      <span class="error" ng-show="shortenForm.input.$error.required">
+         Required!</span>
+       <span class="error" ng-show="shortenForm.input.$error.url">
+         Not valid url!</span>
+     </div>
+  </form>
 </div>
 
 

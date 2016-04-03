@@ -1,3 +1,17 @@
-<div id='container'>
-  <!-- Your html here -->
+<div class="navigation">
+  <ul>
+    <li><a href="#/links" class="All-Links">Links</a></li>
+    <li><a href="#/shorten" class="Shorten">Shorten</a></li>
+  </ul>
+    <a href="#/signin" class="logout">Logout</a>
+</div>
+<div id='container' ng-controller="LinksController">
+  <div class="info">
+    <div class="link" ng-repeat="link in data.links | orderBy: '-visits'">
+      <div class="visits"><span class="count">{{ link.visits }}</span>Visits</div>
+      <div class="title">{{ link.title }}</div>
+      <div class="original">{{ link.url }}</div>
+      <a href='{{ link.baseUrl }}/{{ link.code }}'>short.ly/{{ link.code }}</a>
+    </div>
+  </div>
 </div>

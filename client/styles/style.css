@@ -1,7 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
 body {
   margin: 0;
   margin-top: 10px;
-  font-family: arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 a {
@@ -11,8 +13,16 @@ a {
 }
 
 h1 {
-  font-style: italic;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  font-size: 48px;
+  color: #3525050;;
+}
+
+.header {
+  width: 100vw;
+  height: 60px;
+  background-color: #04FFF5;
 }
 
 .navigation {
@@ -31,7 +41,7 @@ h1 {
   float: left;
 }
 
-.navigation li a {
+.navigation li a, .logout {
   width: 100px;
   height: 20px;
   line-height: 20px;
@@ -41,11 +51,15 @@ h1 {
 }
 
 .navigation li a:hover {
-  background-color: #ddd;
+  background-color: #04FFF5;
+}
+
+.navigation .logout {
+  float: right;
 }
 
 .navigation li a.selected {
-  background-color: #ccc;
+  background-color: #04FFF5;
 }
 
 #container {
@@ -61,7 +75,7 @@ h1 {
 }
 
 .link:hover {
-  background-color: #efe;
+  background-color: #04FFF5;
 }
 
 .link img {
@@ -117,7 +131,7 @@ input[type=url]:focus {
 .error {
   border: red solid 4px;
   padding: 10px;
-  margin: 0 10px;
+  margin-left: 275px;
 }
 
 .clean {
